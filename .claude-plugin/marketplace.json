@@ -1,0 +1,17 @@
+{
+  "name": "promptmetrics",
+  "owner": { "name": "PromptMetrics" },
+  "description": "PromptMetrics coaching skill — The Human Layer soft-skills coaching method.",
+  "plugins": [
+    {
+      "name": "promptmetrics-coach",
+      "source": ".",
+      "description": "Soft-skills coaching method: rehearse and debrief real workplace conversations.",
+      "homepage": "https://github.com/promptmetrics/coach-skill",
+      "repository": "https://github.com/promptmetrics/coach-skill",
+      "license": "MIT",
+      "keywords": ["coaching", "soft-skills", "feedback", "roleplay", "the-human-layer"],
+      "skills": ["./skills/coach-skill"]
+    }
+  ]
+}

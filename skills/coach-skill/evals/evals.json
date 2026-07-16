@@ -1,0 +1,45 @@
+{
+  "skill_name": "coach-skill",
+  "evals": [
+    {
+      "id": 0,
+      "eval_name": "rehearsal-request-direct",
+      "should_trigger": true,
+      "prompt": "Help me rehearse giving my report tough feedback — she keeps missing deadlines and I've been avoiding it.",
+      "expected_output": "Skill loads. Opens by grounding the situation (what was said, what's at stake), confirms rehearsal mode + anonymized default, then runs the four steps in order (Ground it, Name the pattern, Roleplay it, Debrief with teeth). Does not hand generic advice upfront.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "eval_name": "paraphrased-trigger",
+      "should_trigger": true,
+      "prompt": "I need to talk to a client who keeps pushing scope and I'm dreading it. Can we run through it?",
+      "expected_output": "Skill loads despite no use of the word 'coach'. Diagnoses the door (scope creep / client-not-always-right), names the pattern briefly, then enters roleplay as the relentless client. Holds pressure across several exchanges.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "eval_name": "implicit-manager-situation",
+      "should_trigger": true,
+      "prompt": "My team leads keep deferring to me in meetings instead of owning their areas. It's becoming a bottleneck.",
+      "expected_output": "Skill loads even though 'coach' is never said. Recognizes a soft-skills dynamic and offers to rehearse or coach rather than giving a process/organizational fix. Asks grounding questions before advising.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "eval_name": "unrelated-coding-task",
+      "should_trigger": false,
+      "prompt": "Write me a Python script that deduplicates rows in a CSV by a composite key.",
+      "expected_output": "Skill does not load. No interpersonal/soft-skills conversation involved; treat as a normal coding request.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "eval_name": "unrelated-data-task",
+      "should_trigger": false,
+      "prompt": "Make me a spreadsheet that tracks our monthly ad spend by channel.",
+      "expected_output": "Skill does not load. No coaching or difficult-conversation framing; treat as a normal productivity/data request.",
+      "files": []
+    }
+  ]
+}
