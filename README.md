@@ -4,17 +4,26 @@
 
 ## What it is
 
-A soft-skills coaching skill for Claude. Instead of handing out generic advice, it runs a structured four-step method — **Ground it, Name the pattern, Roleplay it, Debrief with teeth** — on whatever real situation you bring: a report who's underperforming, a client pushing scope, a peer you need to confront, a talk you've been avoiding.
+A soft-skills coaching skill for Claude. Instead of handing out generic advice, it runs a structured four-step method — tried, tested, and refined over and over:
 
-The method comes from Ranya Barakat, an operations leader who ran weekly soft-skills coaching for her team for years. Ranya trained as an anthropologist and ended up in tech and CRM almost by accident. What she found there left a sour taste: in a results-driven industry, the human being at the center of every deal, every project, every client relationship quietly becomes a commodity. Success gets measured in outcomes, timelines, revenue — and the person doing the work, and the person on the other side of the table, disappears from the picture.
+- **Ground it**
+- **Name the pattern**
+- **Roleplay it**
+- **Debrief with teeth**
 
-The Human Layer is her response. The belief underneath it: soft skills are not the soft part of the job. They are the actual job, underneath the tech, the tools, and the contracts. Her team was deliberately diverse — colleagues from Egypt, Chile, Mexico, Colombia, India, Uruguay, and El Salvador — servicing upper mid-market and corporate clients in the US. That combination carried a quiet, constant undertow: a feeling of being less than, the underdog in the room, before a single word was said. She built this method so her team could walk into any client relationship as an equal at the table, not a vendor asking for approval.
+It runs on whatever real situation you bring: a report who's underperforming, a client pushing scope, a peer you need to confront, or a talk you've been avoiding.
 
-Every session is in service of one outcome: you leave able to be **seen, felt, and heard as an equal at any table** — knowledgeable and factual, kind and compassionate, always professional, and not able to be messed around with. Hardcore and gentle are not opposites here; the method holds both.
+The method comes from an operations leader who ran weekly soft-skills coaching for her team for years. She is trained as an anthropologist and ended up in tech and CRM by accident. What she found there left a sour taste: in a results-driven industry, the human being at the center of every deal, every project, and every client relationship quietly becomes a commodity. Success gets measured in outcomes, timelines, and revenue, and both the person doing the work and the person on the other side of the table disappear from the picture.
+
+The Human Layer is her response. The belief underneath it: soft skills are not the soft part of the job. They are the actual job, underneath the tech, the tools, and the contracts.
+
+She led a team that regularly walked into rooms already feeling like the underdog, not because of anything they lacked, but because of how quickly people get sized up before they've even spoken. She built this method so her team could walk into any client relationship as an equal at the table, not as a vendor asking for approval.
+
+Every session serves one outcome: you leave able to be **seen, felt, and heard as an equal at any table**. Knowledgeable and factual, kind and compassionate, always professional, and not someone to be messed with. Hardcore and gentle are not opposites here, the method holds both.
 
 ## Who it's for
 
-Managers, operators, RevOps and CS leads, sales and client-facing teams, founders — anyone managing people or managing clients who sits in the uncomfortable middle between what a business wants and what a human relationship actually requires. If you have a hard conversation coming up, or one you've been avoiding, this is for you.
+Managers, operators, RevOps and CS leads, sales and client-facing teams, founders, anyone managing people or managing clients who sit in the uncomfortable middle between what a business wants and what a human relationship actually requires. If you have a hard conversation coming up, or one you've been avoiding, this is for you.
 
 ## Install
 
@@ -60,7 +69,7 @@ Prerequisite: **Code execution and file creation** must be enabled in **Settings
 
 ### Getting the zip
 
-- Download `coach-skill.zip` from the [v0.1 release](https://github.com/promptmetrics/coach-skill/releases/tag/v0.1), or
+- Download `coach-skill.zip` from the [v0.2 release](https://github.com/promptmetrics/coach-skill/releases/tag/v0.2), or
 - Build it locally:
 
 ```
