@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "promptmetrics-coach",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Soft-skills coaching skill — rehearse and debrief real workplace conversations with The Human Layer four-step method. Never gives generic advice.",
   "homepage": "https://github.com/promptmetrics/coach-skill",
   "repository": "https://github.com/promptmetrics/coach-skill",

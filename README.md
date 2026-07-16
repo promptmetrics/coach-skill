@@ -1,10 +1,20 @@
 # coach-skill
 
-A soft-skills coaching skill for Claude — rehearse and debrief real workplace conversations before you're in them. Built on **The Human Layer**, the coaching method of Ranya Barakat.
+> Coaches you through a real soft-skills conversation — feedback, pushback, a hard client or team talk. Use it to rehearse or prepare for a difficult workplace conversation. Built on **The Human Layer**, the coaching method of Ranya Barakat.
 
-The skill runs a structured four-step method — **Ground it, Name the pattern, Roleplay it, Debrief with teeth** — instead of handing out generic advice. It's for managers, operators, and anyone who has to have a hard conversation at work: giving feedback, handling pushback, pushing back on scope, having the talk you've been avoiding.
+## What it is
 
-> Triggers when you ask to coach, rehearse, or prepare for a soft-skills conversation — e.g. "help me rehearse giving my report tough feedback," "roleplay a client pushing back on scope."
+A soft-skills coaching skill for Claude. Instead of handing out generic advice, it runs a structured four-step method — **Ground it, Name the pattern, Roleplay it, Debrief with teeth** — on whatever real situation you bring: a report who's underperforming, a client pushing scope, a peer you need to confront, a talk you've been avoiding.
+
+The method comes from Ranya Barakat, an operations leader who ran weekly soft-skills coaching for her team for years. Ranya trained as an anthropologist and ended up in tech and CRM almost by accident. What she found there left a sour taste: in a results-driven industry, the human being at the center of every deal, every project, every client relationship quietly becomes a commodity. Success gets measured in outcomes, timelines, revenue — and the person doing the work, and the person on the other side of the table, disappears from the picture.
+
+The Human Layer is her response. The belief underneath it: soft skills are not the soft part of the job. They are the actual job, underneath the tech, the tools, and the contracts. Her team was deliberately diverse — colleagues from Egypt, Chile, Mexico, Colombia, India, Uruguay, and El Salvador — servicing upper mid-market and corporate clients in the US. That combination carried a quiet, constant undertow: a feeling of being less than, the underdog in the room, before a single word was said. She built this method so her team could walk into any client relationship as an equal at the table, not a vendor asking for approval.
+
+Every session is in service of one outcome: you leave able to be **seen, felt, and heard as an equal at any table** — knowledgeable and factual, kind and compassionate, always professional, and not able to be messed around with. Hardcore and gentle are not opposites here; the method holds both.
+
+## Who it's for
+
+Managers, operators, RevOps and CS leads, sales and client-facing teams, founders — anyone managing people or managing clients who sits in the uncomfortable middle between what a business wants and what a human relationship actually requires. If you have a hard conversation coming up, or one you've been avoiding, this is for you.
 
 ## Install
 
@@ -16,9 +26,9 @@ The skill runs a structured four-step method — **Ground it, Name the pattern, 
 /reload-plugins
 ```
 
-Then invoke it as `/promptmetrics-coach:coach-skill`, or just ask a coaching question and let it auto-trigger.
+The slash command is `/promptmetrics-coach:coach-skill`. It also auto-triggers when you ask a coaching-shaped question — no slash needed.
 
-**From a local clone** (dev):
+### Claude Code (local clone)
 
 ```
 git clone https://github.com/promptmetrics/coach-skill
@@ -26,42 +36,97 @@ cd coach-skill
 claude --plugin-dir .
 ```
 
-Or copy `skills/coach-skill` into `~/.claude/skills/` to auto-load it without a plugin.
+Or, to auto-load it without a plugin, copy `skills/coach-skill` into `~/.claude/skills/`:
+
+```
+cp -r skills/coach-skill ~/.claude/skills/
+```
 
 ### Claude.ai
 
-1. Build the zip: `./scripts/build-zip.sh` (produces `dist/coach-skill.zip`).
-2. Open **Customize ▸ Skills** (https://claude.ai/customize/skills) → **+** → **+ Create skill** → **Upload a skill** → upload `dist/coach-skill.zip`.
+Prerequisite: **Code execution and file creation** must be enabled in **Settings ▸ Capabilities**.
+
+1. Get `coach-skill.zip` (see "Getting the zip" below).
+2. Open **Customize ▸ Skills** (https://claude.ai/customize/skills) → **+** → **+ Create skill** → **Upload a skill** → upload `coach-skill.zip`.
 3. Enable it in **Settings ▸ Capabilities**.
 
 ### Claude Cowork
 
-- **Standalone skill:** same as Claude.ai — upload `dist/coach-skill.zip` via **Customize ▸ Skills**.
+Prerequisite: **Code execution and file creation** must be enabled in **Settings ▸ Capabilities**.
+
+- **Standalone skill:** same as Claude.ai — upload `coach-skill.zip` via **Customize ▸ Skills**.
 - **Bundled in a plugin:** add the skill to a Cowork plugin via **Customize ▸ Plugins**.
+- **Org-wide:** an owner enables sharing in **Organization settings ▸ Skills**, then the skill's **Share** action shares it with specific people or the whole org.
+
+### Getting the zip
+
+- Download `coach-skill.zip` from the [v0.1 release](https://github.com/promptmetrics/coach-skill/releases/tag/v0.1), or
+- Build it locally:
+
+```
+./scripts/build-zip.sh
+```
+
+The script produces `dist/coach-skill.zip`.
 
 ## What a session looks like
 
 You bring a real situation — a report who's underperforming, a client pushing scope, a peer you need to confront.
 
-1. **Ground it.** The skill asks 2-3 sharp questions until it has the real, specific situation, not an abstract topic.
-2. **Name the pattern.** It identifies the dynamic in two or three sentences and gives it a name you can hold onto (often mapped onto LAER: Listen, Acknowledge, Explore, Respond).
-3. **Roleplay it.** It plays the counterpart — relentless, not clever — and makes the rehearsal genuinely hard. It offers tight, reusable sound bites when you get stuck.
-4. **Debrief with teeth.** It asks how *you* think you did, then gives an honest read, reruns the moment that needs work, and closes with three actionable tips, a sound bite, and a report-back expectation.
+1. **Ground it.** The skill asks 2-3 sharp questions until it has the real, specific situation, not an abstract topic. Vague situations produce vague roleplay, so it pushes for specifics here.
+2. **Name the pattern.** It identifies the dynamic at play in two or three sentences and gives it a name you can hold onto. Where one applies, it maps the situation onto **LAER** (Listen, Acknowledge, Explore, Respond) — the base logic underneath almost every charged conversation in this method.
+3. **Roleplay it.** It plays the counterpart — relentless, not clever — and makes the rehearsal genuinely hard. Difficult people repeat deflections rather than debating; the roleplay reflects that. It offers tight, reusable sound bites (the actual words) when you get stuck.
+4. **Debrief with teeth.** It asks how *you* think you did, then gives an honest, specific read. It reruns the moment that needs work to test whether you apply the feedback or repeat the pattern. It closes with three actionable tips for the week, one or two sound bites you can use verbatim, and a report-back expectation for next time.
 
 It is deliberately uncomfortable — that discomfort is the method working. The target is calm, grounded, unshakeable, and still human.
 
-## What's in here
+## The seven doors (topics it covers)
+
+One argument, seven entry points. You usually arrive at one door; the skill recognizes which and coaches through it.
+
+- **The accent** — turning a second/third/fourth-language accent from something hidden into proof of operating across cultures. An accent is evidence of range, not a deficiency to apologize for.
+- **The client is not always right** — permission to disagree with a client factually and professionally. The goal is staying grounded in what's true, not winning.
+- **Partner, not vendor** — naming shared accountability out loud without being confrontational. A partner sits at the table; a vendor waits for approval.
+- **Reading the room without becoming the room** — observing power dynamics accurately without adopting the cynical habits of people who play politics badly.
+- **Using intuition in client management** — naming the "something's off" moment before you have proof, and treating it as a data point worth investigating.
+- **Telling a client you're having a bad day** — a calibration skill: disclosure that builds trust (brief, contained) vs. disclosure that reads as unprofessional (open-ended, shifts the burden).
+- **The Raydar move** — turning an emotionally charged conversation into a fact-based one before it explodes. Track what was sold, what was delivered with proof, and what was not — on the record, before the next hard conversation.
+
+## Boundaries
+
+This is a workplace communication method, not therapy. It will not diagnose you, or anyone you describe, with a mental health condition. It won't offer clinical coping techniques. If a situation involves real distress, harassment, abuse, or anything beyond ordinary workplace friction, it stops the coaching frame, names plainly that this is bigger than a rehearsal session, and points you to real support — HR, a manager, a professional. It defaults to anonymized scenarios for third parties unless you explicitly opt into real specifics.
+
+## Repository contents
 
 ```
-skills/coach-skill/
-├── SKILL.md              # the method (four steps, LAER, boundaries, tone)
-├── references/
-│   └── the-method.md     # origin, persona framing, the seven conversation topics
-└── evals/
-    └── evals.json        # trigger / non-trigger test cases
+coach-skill/
+├── LICENSE                                     # MIT
+├── README.md                                   # this file
+├── The-Complete-Guide-to-Building-Skills-for-Claude.md   # maintainer reference (Anthropic skills-building guide)
+├── .claude-plugin/
+│   ├── plugin.json                             # promptmetrics-coach plugin manifest
+│   └── marketplace.json                        # promptmetrics marketplace manifest
+├── scripts/
+│   └── build-zip.sh                            # builds dist/coach-skill.zip for Claude.ai / Cowork upload
+├── dist/                                       # build output (coach-skill.zip)
+├── archive/                                    # older snapshots
+└── skills/
+    └── coach-skill/
+        ├── SKILL.md                            # the method (four steps, LAER, boundaries, tone) — model-facing
+        ├── README.md                           # human-facing companion to SKILL.md
+        ├── references/
+        │   └── the-method.md                   # origin, persona framing, the seven doors
+        └── evals/
+            └── evals.json                      # trigger / non-trigger test cases
 ```
 
-No scripts, no secrets, no MCP — it's a pure conversational skill, which is why the same folder ships to Claude Code, Claude.ai, and Cowork unchanged.
+`The-Complete-Guide-to-Building-Skills-for-Claude.md` is the Anthropic skills-building guide, kept at the repo root as a maintainer reference. It is not part of the skill itself.
+
+No scripts, no secrets, no MCP — `coach-skill` is a pure conversational skill, which is why the same folder ships to Claude Code, Claude.ai, and Cowork unchanged.
+
+## Compatibility / portability
+
+The same `skills/coach-skill` folder works on Claude Code, Claude.ai, and Claude Cowork unchanged — it follows the open Agent Skills spec. The `SKILL.md` `description` is kept under the 200-character limit that Claude.ai and Cowork enforce, so the skill's trigger behavior stays consistent across surfaces. The plugin manifests (`.claude-plugin/`) are only used by Claude Code's plugin loader; Claude.ai and Cowork use the uploaded zip directly.
 
 ## License
 
