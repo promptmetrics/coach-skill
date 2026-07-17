@@ -6,7 +6,7 @@
     {
       "name": "promptmetrics-coach",
       "source": ".",
-      "description": "Soft-skills coaching method: rehearse and debrief real workplace conversations.",
+      "description": "Soft-skills coaching method: rehearse and debrief real workplace conversations with the five-step method (incl. a Growth Log).",
       "homepage": "https://github.com/promptmetrics/coach-skill",
       "repository": "https://github.com/promptmetrics/coach-skill",
       "license": "MIT",

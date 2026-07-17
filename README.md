@@ -1,19 +1,20 @@
 # coach-skill
 
-> Coaches you through a real soft-skills conversation — feedback, pushback, a hard client or team talk. Use it to rehearse or prepare for a difficult workplace conversation. Built on **The Human Layer**, the coaching method of Ranya Barakat.
+> Coaches you through a real soft-skills conversation — feedback, pushback, a hard client or team talk. Use it to rehearse or prepare for a difficult workplace conversation. Built on **The Human Layer**, the coaching method of Ranya.
 
 ## What it is
 
-A soft-skills coaching skill for Claude. Instead of handing out generic advice, it runs a structured four-step method — tried, tested, and refined over and over:
+A soft-skills coaching skill for Claude. Instead of handing out generic advice, it runs a structured five-step method — tried, tested, and refined over and over:
 
 - **Ground it**
 - **Name the pattern**
 - **Roleplay it**
 - **Debrief with teeth**
+- **Log it: the Growth Log**
 
 It runs on whatever real situation you bring: a report who's underperforming, a client pushing scope, a peer you need to confront, or a talk you've been avoiding.
 
-The method comes from an operations leader who ran weekly soft-skills coaching for her team for years. She is trained as an anthropologist and ended up in tech and CRM by accident. What she found there left a sour taste: in a results-driven industry, the human being at the center of every deal, every project, and every client relationship quietly becomes a commodity. Success gets measured in outcomes, timelines, and revenue, and both the person doing the work and the person on the other side of the table disappear from the picture.
+The method comes from an operations leader who ran weekly soft-skills coaching for her team for years. She is trained as an anthropologist and ended up in tech and CRM almost by accident. What she found there left a sour taste: in a results-driven industry, the human being at the center of every deal, every project, and every client relationship quietly becomes a commodity. Success gets measured in outcomes, timelines, and revenue, and both the person doing the work and the person on the other side of the table disappear from the picture.
 
 The Human Layer is her response. The belief underneath it: soft skills are not the soft part of the job. They are the actual job, underneath the tech, the tools, and the contracts.
 
@@ -69,7 +70,7 @@ Prerequisite: **Code execution and file creation** must be enabled in **Settings
 
 ### Getting the zip
 
-- Download `coach-skill.zip` from the [v0.2 release](https://github.com/promptmetrics/coach-skill/releases/tag/v0.2), or
+- Download `coach-skill.zip` from the [v0.3 release](https://github.com/promptmetrics/coach-skill/releases/tag/v0.3), or
 - Build it locally:
 
 ```
@@ -86,6 +87,7 @@ You bring a real situation — a report who's underperforming, a client pushing 
 2. **Name the pattern.** It identifies the dynamic at play in two or three sentences and gives it a name you can hold onto. Where one applies, it maps the situation onto **LAER** (Listen, Acknowledge, Explore, Respond) — the base logic underneath almost every charged conversation in this method.
 3. **Roleplay it.** It plays the counterpart — relentless, not clever — and makes the rehearsal genuinely hard. Difficult people repeat deflections rather than debating; the roleplay reflects that. It offers tight, reusable sound bites (the actual words) when you get stuck.
 4. **Debrief with teeth.** It asks how *you* think you did, then gives an honest, specific read. It reruns the moment that needs work to test whether you apply the feedback or repeat the pattern. It closes with three actionable tips for the week, one or two sound bites you can use verbatim, and a report-back expectation for next time.
+5. **Log it: the Growth Log.** The session is written to a Growth Log — a running record of the situations you've worked, the patterns you named, and the sound bites you took away. When Google Drive is connected it lands as a Sheet tab; otherwise it produces a downloadable markdown file you can keep and revisit.
 
 It is deliberately uncomfortable — that discomfort is the method working. The target is calm, grounded, unshakeable, and still human.
 
@@ -99,7 +101,7 @@ One argument, seven entry points. You usually arrive at one door; the skill reco
 - **Reading the room without becoming the room** — observing power dynamics accurately without adopting the cynical habits of people who play politics badly.
 - **Using intuition in client management** — naming the "something's off" moment before you have proof, and treating it as a data point worth investigating.
 - **Telling a client you're having a bad day** — a calibration skill: disclosure that builds trust (brief, contained) vs. disclosure that reads as unprofessional (open-ended, shifts the burden).
-- **The Raydar move** — turning an emotionally charged conversation into a fact-based one before it explodes. Track what was sold, what was delivered with proof, and what was not — on the record, before the next hard conversation.
+- **The Client Ledger move** — turning an emotionally charged conversation into a fact-based one before it explodes. Track what was sold, what was delivered with proof, and what was not — on the record, before the next hard conversation. A template is bundled with the skill at `skills/coach-skill/references/client-ledger-template.md`.
 
 ## Boundaries
 
@@ -121,17 +123,18 @@ coach-skill/
 ├── archive/                                    # older snapshots
 └── skills/
     └── coach-skill/
-        ├── SKILL.md                            # the method (four steps, LAER, boundaries, tone) — model-facing
+        ├── SKILL.md                            # the method (five steps, LAER, boundaries, tone) — model-facing
         ├── README.md                           # human-facing companion to SKILL.md
         ├── references/
-        │   └── the-method.md                   # origin, persona framing, the seven doors
+        │   ├── the-method.md                   # origin, persona framing, the seven doors + Growth Log
+        │   └── client-ledger-template.md        # Client Ledger template (Door 7)
         └── evals/
             └── evals.json                      # trigger / non-trigger test cases
 ```
 
 `The-Complete-Guide-to-Building-Skills-for-Claude.md` is the Anthropic skills-building guide, kept at the repo root as a maintainer reference. It is not part of the skill itself.
 
-No scripts, no secrets, no MCP — `coach-skill` is a pure conversational skill, which is why the same folder ships to Claude Code, Claude.ai, and Cowork unchanged.
+No scripts, no secrets, no MCP — `coach-skill` is a pure conversational skill. The only file it produces is the Growth Log (a Sheet tab when Drive is connected, otherwise a downloadable markdown file); which is why the same folder ships to Claude Code, Claude.ai, and Cowork unchanged.
 
 ## Compatibility / portability
 
