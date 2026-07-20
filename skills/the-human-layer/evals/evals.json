@@ -1,12 +1,12 @@
 {
-  "skill_name": "coach-skill",
+  "skill_name": "the-human-layer",
   "evals": [
     {
       "id": 0,
       "eval_name": "rehearsal-request-direct",
       "should_trigger": true,
       "prompt": "Help me rehearse giving my report tough feedback — she keeps missing deadlines and I've been avoiding it.",
-      "expected_output": "Skill loads. Opens by grounding the situation (what was said, what's at stake), confirms rehearsal mode + anonymized default, then runs the five steps in order (Ground it, Name the pattern, Roleplay it, Debrief with teeth, Log it: the Growth Log). Does not hand generic advice upfront. The session closes by logging what was tried and the three practice tasks to a Growth Log.",
+      "expected_output": "Skill loads. Opens by grounding the situation (what was said, what's at stake), confirms rehearsal mode + anonymized default, then runs the five steps in order (Ground it, Name the pattern, Roleplay it, Debrief with teeth, Log it: the Growth Log). In Name the pattern it offers the LAER vs LAER+Never Split the Difference choice and the optional Art of War opt-in. Does not hand generic advice upfront. The session closes by logging the framework used, the coachability check, and the three practice tasks to a Growth Log.",
       "files": []
     },
     {

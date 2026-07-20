@@ -36,7 +36,7 @@ Managers, operators, RevOps and CS leads, sales and client-facing teams, founder
 /reload-plugins
 ```
 
-The slash command is `/promptmetrics-coach:coach-skill`. It also auto-triggers when you ask a coaching-shaped question — no slash needed.
+The slash command is `/promptmetrics-coach:the-human-layer`. It also auto-triggers when you ask a coaching-shaped question — no slash needed.
 
 ### Claude Code (local clone)
 
@@ -46,48 +46,48 @@ cd coach-skill
 claude --plugin-dir .
 ```
 
-Or, to auto-load it without a plugin, copy `skills/coach-skill` into `~/.claude/skills/`:
+Or, to auto-load it without a plugin, copy `skills/the-human-layer` into `~/.claude/skills/`:
 
 ```
-cp -r skills/coach-skill ~/.claude/skills/
+cp -r skills/the-human-layer ~/.claude/skills/
 ```
 
 ### Claude.ai
 
 Prerequisite: **Code execution and file creation** must be enabled in **Settings ▸ Capabilities**.
 
-1. Get `coach-skill.zip` (see "Getting the zip" below).
-2. Open **Customize ▸ Skills** (https://claude.ai/customize/skills) → **+** → **+ Create skill** → **Upload a skill** → upload `coach-skill.zip`.
+1. Get `the-human-layer.zip` (see "Getting the zip" below).
+2. Open **Customize ▸ Skills** (https://claude.ai/customize/skills) → **+** → **+ Create skill** → **Upload a skill** → upload `the-human-layer.zip`.
 3. Enable it in **Settings ▸ Capabilities**.
 
 ### Claude Cowork
 
 Prerequisite: **Code execution and file creation** must be enabled in **Settings ▸ Capabilities**.
 
-- **Standalone skill:** same as Claude.ai — upload `coach-skill.zip` via **Customize ▸ Skills**.
+- **Standalone skill:** same as Claude.ai — upload `the-human-layer.zip` via **Customize ▸ Skills**.
 - **Bundled in a plugin:** add the skill to a Cowork plugin via **Customize ▸ Plugins**.
 - **Org-wide:** an owner enables sharing in **Organization settings ▸ Skills**, then the skill's **Share** action shares it with specific people or the whole org.
 
 ### Getting the zip
 
-- Download `coach-skill.zip` from the [v0.3 release](https://github.com/promptmetrics/coach-skill/releases/tag/v0.3), or
+- Download `the-human-layer.zip` from the [v0.4 release](https://github.com/promptmetrics/coach-skill/releases/tag/v0.4), or
 - Build it locally:
 
 ```
 ./scripts/build-zip.sh
 ```
 
-The script produces `dist/coach-skill.zip`.
+The script produces `dist/the-human-layer.zip`.
 
 ## What a session looks like
 
 You bring a real situation — a report who's underperforming, a client pushing scope, a peer you need to confront.
 
 1. **Ground it.** The skill asks 2-3 sharp questions until it has the real, specific situation, not an abstract topic. Vague situations produce vague roleplay, so it pushes for specifics here.
-2. **Name the pattern.** It identifies the dynamic at play in two or three sentences and gives it a name you can hold onto. Where one applies, it maps the situation onto **LAER** (Listen, Acknowledge, Explore, Respond) — the base logic underneath almost every charged conversation in this method.
-3. **Roleplay it.** It plays the counterpart — relentless, not clever — and makes the rehearsal genuinely hard. Difficult people repeat deflections rather than debating; the roleplay reflects that. It offers tight, reusable sound bites (the actual words) when you get stuck.
-4. **Debrief with teeth.** It asks how *you* think you did, then gives an honest, specific read. It reruns the moment that needs work to test whether you apply the feedback or repeat the pattern. It closes with three actionable tips for the week, one or two sound bites you can use verbatim, and a report-back expectation for next time.
-5. **Log it: the Growth Log.** The session is written to a Growth Log — a running record of the situations you've worked, the patterns you named, and the sound bites you took away. When Google Drive is connected it lands as a Sheet tab; otherwise it produces a downloadable markdown file you can keep and revisit.
+2. **Name the pattern.** It identifies the dynamic at play in two or three sentences and gives it a name you can hold onto. Then it asks you to choose your framework: **LAER** (Listen, Acknowledge, Explore, Respond) alone, or **LAER sharpened with *Never Split the Difference*** (mirroring, labeling, calibrated questions). You can also opt into an ***Art of War* layer** that makes the counterpart tougher and less predictable — Claude's strategy for playing the character, never taught to you as technique.
+3. **Roleplay it.** It plays the counterpart — relentless, not clever — and makes the rehearsal genuinely hard. Difficult people repeat deflections rather than debating; the roleplay reflects that. It offers tight, reusable sound bites (the actual words) that match the framework you chose, when you get stuck.
+4. **Debrief with teeth.** It asks how *you* think you did, then gives an honest, specific read. It reruns the moment that needs work to test whether you apply the feedback or repeat the pattern, and branches on what it sees. It closes with three actionable tips for the week, one or two sound bites you can use verbatim, and a report-back expectation for next time.
+5. **Log it: the Growth Log.** The session is written to a Growth Log — a running record of the situations you've worked, the framework you used, the Art of War layer, the coachability check, and the sound bites you took away. When Google Drive is connected it lands as a Sheet tab; otherwise it produces a downloadable markdown file you can keep and revisit.
 
 It is deliberately uncomfortable — that discomfort is the method working. The target is calm, grounded, unshakeable, and still human.
 
@@ -101,7 +101,7 @@ One argument, seven entry points. You usually arrive at one door; the skill reco
 - **Reading the room without becoming the room** — observing power dynamics accurately without adopting the cynical habits of people who play politics badly.
 - **Using intuition in client management** — naming the "something's off" moment before you have proof, and treating it as a data point worth investigating.
 - **Telling a client you're having a bad day** — a calibration skill: disclosure that builds trust (brief, contained) vs. disclosure that reads as unprofessional (open-ended, shifts the burden).
-- **The Client Ledger move** — turning an emotionally charged conversation into a fact-based one before it explodes. Track what was sold, what was delivered with proof, and what was not — on the record, before the next hard conversation. A template is bundled with the skill at `skills/coach-skill/references/client-ledger-template.md`.
+- **The Client Ledger move** — turning an emotionally charged conversation into a fact-based one before it explodes. Track what was sold, what was delivered with proof, and what was not — on the record, before the next hard conversation. A template is bundled with the skill at `skills/the-human-layer/references/client-ledger-template.md`.
 
 ## Boundaries
 
@@ -118,12 +118,12 @@ coach-skill/
 │   ├── plugin.json                             # promptmetrics-coach plugin manifest
 │   └── marketplace.json                        # promptmetrics marketplace manifest
 ├── scripts/
-│   └── build-zip.sh                            # builds dist/coach-skill.zip for Claude.ai / Cowork upload
-├── dist/                                       # build output (coach-skill.zip)
+│   └── build-zip.sh                            # builds dist/the-human-layer.zip for Claude.ai / Cowork upload
+├── dist/                                       # build output (the-human-layer.zip)
 ├── archive/                                    # older snapshots
 └── skills/
-    └── coach-skill/
-        ├── SKILL.md                            # the method (five steps, LAER, boundaries, tone) — model-facing
+    └── the-human-layer/
+        ├── SKILL.md                            # the method (five steps, LAER + Never Split the Difference + Art of War, boundaries, tone) — model-facing
         ├── README.md                           # human-facing companion to SKILL.md
         ├── references/
         │   ├── the-method.md                   # origin, persona framing, the seven doors + Growth Log
@@ -134,11 +134,11 @@ coach-skill/
 
 `The-Complete-Guide-to-Building-Skills-for-Claude.md` is the Anthropic skills-building guide, kept at the repo root as a maintainer reference. It is not part of the skill itself.
 
-No scripts, no secrets, no MCP — `coach-skill` is a pure conversational skill. The only file it produces is the Growth Log (a Sheet tab when Drive is connected, otherwise a downloadable markdown file); which is why the same folder ships to Claude Code, Claude.ai, and Cowork unchanged.
+No scripts, no secrets, no MCP — `the-human-layer` is a pure conversational skill. The only file it produces is the Growth Log (a Sheet tab when Drive is connected, otherwise a downloadable markdown file); which is why the same folder ships to Claude Code, Claude.ai, and Cowork unchanged.
 
 ## Compatibility / portability
 
-The same `skills/coach-skill` folder works on Claude Code, Claude.ai, and Claude Cowork unchanged — it follows the open Agent Skills spec. The `SKILL.md` `description` is kept under the 200-character limit that Claude.ai and Cowork enforce, so the skill's trigger behavior stays consistent across surfaces. The plugin manifests (`.claude-plugin/`) are only used by Claude Code's plugin loader; Claude.ai and Cowork use the uploaded zip directly.
+The same `skills/the-human-layer` folder works on Claude Code, Claude.ai, and Claude Cowork unchanged — it follows the open Agent Skills spec. The `SKILL.md` `description` is kept under the 200-character limit that Claude.ai and Cowork enforce, so the skill's trigger behavior stays consistent across surfaces. The plugin manifests (`.claude-plugin/`) are only used by Claude Code's plugin loader; Claude.ai and Cowork use the uploaded zip directly.
 
 ## License
 

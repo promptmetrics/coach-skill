@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
-# Build a Claude.ai / Cowork-uploadable zip for the coach-skill skill.
-# Produces dist/coach-skill.zip with the skill folder at the zip root
+# Build a Claude.ai / Cowork-uploadable zip for the the-human-layer skill.
+# Produces dist/the-human-layer.zip with the skill folder at the zip root
 # (files directly at the zip root is the documented upload failure mode).
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
-SKILL_DIR="skills/coach-skill"
+SKILL_DIR="skills/the-human-layer"
 SKILL_MD="$SKILL_DIR/SKILL.md"
 OUT_DIR="dist"
-OUT="$OUT_DIR/coach-skill.zip"
+OUT="$OUT_DIR/the-human-layer.zip"
 
 if [ ! -f "$SKILL_MD" ]; then
   echo "ERROR: $SKILL_MD not found" >&2
@@ -41,13 +41,13 @@ else
   echo "NOTE: 'skills-ref' not installed — skipping validation. Install from https://github.com/agentskills/agentskills/tree/main/skills-ref"
 fi
 
-ABS_OUT="$PWD/$OUT_DIR/coach-skill.zip"
+ABS_OUT="$PWD/$OUT_DIR/the-human-layer.zip"
 rm -rf "$OUT_DIR"
 mkdir -p "$OUT_DIR"
 rm -f "$ABS_OUT"
 
 # Zip from skills/ so the skill folder sits at the zip root.
-( cd skills && zip -rq "$ABS_OUT" "coach-skill" )
+( cd skills && zip -rq "$ABS_OUT" "the-human-layer" )
 
 echo "Built $OUT"
 echo "Top-level entries:"

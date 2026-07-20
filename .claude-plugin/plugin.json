@@ -1,8 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "promptmetrics-coach",
-  "version": "0.3.0",
-  "description": "Soft-skills coaching skill — rehearse and debrief real workplace conversations with The Human Layer five-step method (incl. a Growth Log). Never gives generic advice.",
+  "version": "0.4.0",
+  "description": "Soft-skills coaching skill — rehearse and debrief real workplace conversations with The Human Layer five-step method (LAER + Never Split the Difference + Art of War, incl. a Growth Log). Never gives generic advice.",
   "homepage": "https://github.com/promptmetrics/coach-skill",
   "repository": "https://github.com/promptmetrics/coach-skill",
   "author": { "name": "Ranya Barakat", "url": "https://github.com/promptmetrics" },
